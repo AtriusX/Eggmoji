@@ -39,10 +39,11 @@ body {
 
 #name {
   font-size: 1.5rem;
+  border: 1px solid transparent;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  padding-left: 0.5em;
 }
-
-/* #confirm 
-{ } */
 
 input[type="button"] {
   background-color: #fbe4ff;
@@ -63,6 +64,12 @@ input[type="button"]::-moz-focus-inner {
 
 input[type="button"]:focus {
     outline: none;
+}
+
+#confirm {
+  margin-left: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .container {

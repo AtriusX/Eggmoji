@@ -13,8 +13,10 @@
   <body onload="process()">
     <div class="input" align="center">
       <span class="at">@</span>
-      <input type="text" id="name" placeholder="username" />
-      <input type="button" value="Confirm" id="confirm" onclick="process()" />
+      <!-- This prevents a space from being created between these elements. -->
+      <input type="text" id="name" placeholder="username" /><input
+        type="button" value="Confirm" id="confirm" onclick="process()"
+      />
     </div>
     <div class="container" align="center">
       <canvas id="egg" height="512" width="512">
@@ -24,7 +26,7 @@
       <a id="download" download="egg.png">
         <input type="button" value="Download" onclick="download()" />
       </a>
-      <input id="update" type="button" value="Update" onclick="toggleAutoUpdate()" /> 
+      <input id="update" type="button" value="Update" onclick="toggleAutoUpdate()" />
     </div>
   </body>
 </html>
