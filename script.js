@@ -33,5 +33,5 @@ function download() {
     let [ canvas, ctx ] = getCanvas('egg');
     // let name  = document.getElementById('name');
     let input = name.value;
-    canvas.toDataURL('image/png');
+    console.log(canvas.toDataURL('image/png'));
 }
