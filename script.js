@@ -7,7 +7,7 @@ const IMG_DATA      = [];
 TEMPLATE_META.forEach(img => {
     IMG_DATA.push(createImage(img.src));
 });
-// 
+// Non-random components
 const IMG_BASE   = createImage(meta.base);
 const IMG_MASK   = createImage(meta.mask);
 const IMG_SHADOW = createImage(meta.shadow);
