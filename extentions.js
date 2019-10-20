@@ -1,6 +1,6 @@
 /**
  * Draws an image onto a canvas with a specified angle and opacity.
- * 
+ *
  * @param {Image}  img     The image object to draw.
  * @param {Number} angle   The angle of rotation.
  * @param {Number} opacity The image's opacity.
