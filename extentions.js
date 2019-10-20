@@ -5,7 +5,7 @@
  * @param {Number} angle   The angle of rotation.
  * @param {Number} opacity The image's opacity.
  */
-CanvasRenderingContext2D.prototype.drawImg = (img, angle, opacity) => {
+CanvasRenderingContext2D.prototype.drawImg = function(img, angle, opacity) {
   this.save();
   this.translate(CANVAS_CENTER, CANVAS_CENTER);
   this.rotate((angle * Math.PI) / 180);
@@ -19,7 +19,7 @@ CanvasRenderingContext2D.prototype.drawImg = (img, angle, opacity) => {
  *
  * @param {String} input The seed source.
  */
-String.prototype.seed = len => {
+String.prototype.seed = function(len) {
   // Map each character to it's corresponding charcode
   let seed = this.split("")
     .map(c => parseInt(c.charCodeAt(0), 10))
@@ -43,7 +43,7 @@ String.prototype.seed = len => {
   return seed;
 };
 
-Image.prototype.color = c => {
+Image.prototype.color = function(c) {
   let [canvas, ctx] = getCanvas();
   ctx.drawImage(this, 0, 0);
   ctx.globalCompositeOperation = "source-in";
@@ -54,7 +54,7 @@ Image.prototype.color = c => {
   return canvas;
 };
 
-HTMLCanvasElement.prototype.clear = () => {
+HTMLCanvasElement.prototype.clear = function() {
   this.getContext("2d").clearRect(0, 0, this.width, this.height);
 };
 
