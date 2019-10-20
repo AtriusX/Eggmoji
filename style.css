@@ -1,79 +1,80 @@
 * {
-    margin: 0;
-    font-family: "Biko", sans-serif;
+  margin: 0;
+  font-family: "Biko", sans-serif;
 }
 
 @font-face {
-    font-family: "Biko";
-    src: url('./fonts/Biko_Regular.otf');
+  font-family: "Biko";
+  src: url("./fonts/Biko_Regular.otf");
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+  height: 100%;
 }
 
 html {
-    display: table;
-    margin: auto;
+  display: table;
+  margin: auto;
 }
 
 body {
-    display: table-cell;
-    vertical-align: middle;
-    background: linear-gradient(45deg, #AFCBFF 0%, #6EB5FF 100%);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+  display: table-cell;
+  vertical-align: middle;
+  background: linear-gradient(45deg, #afcbff 0%, #6eb5ff 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 /* .input 
 { } */
 .at {
-    color: white;
-    text-shadow: 1px 1px gray;
-    font-size: 2rem;
-    text-anchor: end;
-    font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px gray;
+  font-size: 2rem;
+  text-anchor: end;
+  font-weight: bold;
 }
 
 #name {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 /* #confirm 
 { } */
 
 input[type="button"] {
-    background-color: #FBE4FF;
-    border: 2px solid transparent;
-    border-radius: 100px;
-    font-size: 1.5rem;
-    transition: 80ms;
+  background-color: #fbe4ff;
+  border: 2px solid transparent;
+  border-radius: 100px;
+  font-size: 1.5rem;
+  transition: 80ms;
 }
 
 input[type="button"]:hover {
-    filter: brightness(95%);
-    filter: saturate(500%);
+  filter: brightness(95%);
+  filter: saturate(500%);
 }
 
 .container {
-    margin-top: 4em;
+  margin-top: 4em;
 }
 
 #egg {
-    border: 2px solid dodgerblue;
-    background-color: whitesmoke;
-    margin-bottom: 2em;
-    vertical-align: middle;
+  border: 2px solid dodgerblue;
+  background-color: whitesmoke;
+  margin-bottom: 2em;
+  vertical-align: middle;
 }
 
 .phrase {
-    color: white;
-    text-shadow: 1px 1px gray;
-    font-size: 1.5rem;
-    margin-bottom: 1em;
-    font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px gray;
+  font-size: 1.5rem;
+  margin-bottom: 1em;
+  font-weight: bold;
 }
 
 #download {
-    width: 15em;
+  width: 15em;
 }

@@ -1,10 +1,12 @@
 # Eggmoji
+
 Generate random egg emojis
 
 # The Process
+
 The system starts off by generating an egg based of a base rule. These rules are either solid or gradient fills.
 Following this, template pieces are chosen to be placed over the egg, each piece colored differently in a way
-that compliments the base colors. 
+that compliments the base colors.
 
 1. Generate base egg (solid or gradient)
 2. Generate complimentary designs (if any)
@@ -21,7 +23,7 @@ outside of the JSON file.) The following properties are used:
 
 - Image source -- Image file link
 - Max rotation -- The max number of degrees a template can be rotated
-- Flipping     -- Whether or not an image can be flipped horizontally, vertically, both, or neither
-- Stretching   -- Whether or not an image can be stretched horizontally, vertically, both or neither
-- Words        -- Words related to the template (can be used to build phrases to pass along with the egg)
-- 
+- Flipping -- Whether or not an image can be flipped horizontally, vertically, both, or neither
+- Stretching -- Whether or not an image can be stretched horizontally, vertically, both or neither
+- Words -- Words related to the template (can be used to build phrases to pass along with the egg)
+-
