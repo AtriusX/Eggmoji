@@ -30,8 +30,10 @@ function process() {
 }
 
 function download() {
-    let [ canvas, ctx ] = getCanvas('egg');
+    let [ canvas ] = getCanvas('egg');
     // let name  = document.getElementById('name');
-    let input = name.value;
-    console.log(canvas.toDataURL('image/png'));
+    var download = document.getElementById("download");
+    var image = canvas.toDataURL("image/png")
+        .replace("image/png", "image/octet-stream");
+    download.setAttribute("href", image);
 }
