@@ -54,8 +54,7 @@ input[type="button"] {
 }
 
 input[type="button"]:enabled:hover {
-  filter: brightness(95%);
-  filter: saturate(500%);
+  filter: brightness(95%) saturate(500%);
 }
 
 input[type="button"]::-moz-focus-inner {
