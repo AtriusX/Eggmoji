@@ -38,3 +38,19 @@ function download() {
     .replace("image/png", "image/octet-stream");
   download.setAttribute("href", image);
 }
+
+function toggleAutoUpdate() {
+    let update  = document.getElementById('update');
+    let confirm = document.getElementById('confirm');
+    let name    = document.getElementById('name');
+    // Toggle properties
+    if (confirm.hasAttribute('disabled')) {
+        confirm.removeAttribute('disabled');
+        update.style.backgroundColor = '#fbe4ff';
+        name.removeAttribute('oninput');
+    } else {
+        confirm.setAttribute('disabled', '');
+        update.style.backgroundColor = '#bcffe5';
+        name.setAttribute('oninput', 'process()');
+    }
+}
