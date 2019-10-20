@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script type="text/javascript" src="templates/meta.js"></script>
-    <script type="text/javascript" src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
     <title>Eggmoji!</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="lib/seedrandom.min.js"></script>
+    <script type="text/javascript" src="templates/meta.js"></script>
+    <script type="text/javascript" src="extentions.js"></script>
+    <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
     <div class="input" align="center">
@@ -20,7 +20,9 @@
             Canvas is not supported in your browser!
         </canvas>
         <p class="phrase">Enter your username to get your egg!</p>
-        <input type="button" value="Download" id="download" onclick="download()">
+        <a id="download" download="egg.png">
+            <input id="dl" type="button" value="Download" onclick="download()">
+        </a>
     </div>
 </body>
 </html>
