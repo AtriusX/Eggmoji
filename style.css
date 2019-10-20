@@ -58,6 +58,14 @@ input[type="button"]:enabled:hover {
   filter: saturate(500%);
 }
 
+input[type="button"]::-moz-focus-inner {
+    outline: none;
+} 
+
+input[type="button"]:focus {
+    outline: none;
+}
+
 .container {
   margin-top: 4em;
 }
