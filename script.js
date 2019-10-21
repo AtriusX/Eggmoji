@@ -5,12 +5,12 @@ const TEMPLATE_META = meta.templates;
 const IMG_DATA      = [];
 // Populate data
 TEMPLATE_META.forEach(img => {
-  IMG_DATA.push(createImage(img.src));
+  IMG_DATA.push(img.src.toImage());
 });
 // Non-random components
-const IMG_BASE   = createImage(meta.base);
-const IMG_MASK   = createImage(meta.mask);
-const IMG_SHADOW = createImage(meta.shadow);
+const IMG_BASE   = meta.base.toImage();
+const IMG_MASK   = meta.mask.toImage();
+const IMG_SHADOW = meta.shadow.toImage();
 
 function process() {
   let [canvas, ctx] = getCanvas("egg");
@@ -18,11 +18,11 @@ function process() {
   canvas.clear();
   // Generate seed
   let name = document.getElementById("name").value;
-  let seed = name.seed(SEED_LENGTH);
-  Math.seedrandom(seed);
+  Math.seedrandom(name);
+
   ctx.drawImg(IMG_BASE.color(), 0, 1);
   IMG_DATA.forEach(img => {
-    if (Math.random() > 0.8)
+    if (Math.random() > Math.random())
       ctx.drawImg(img.color(), Math.random() * 180, Math.random());
   });
   ctx.drawImg(IMG_SHADOW, 0, 0.18);
