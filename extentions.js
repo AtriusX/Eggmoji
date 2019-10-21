@@ -18,6 +18,11 @@ CanvasRenderingContext2D.prototype.drawImg = function(img, angle, opacity) {
  * Generates a numeric seed from a string input.
  *
  * @param {String} input The seed source.
+ * @deprecated 
+ *    In favor of @function Math.seedrandom() since it
+ *    supports direct string conversion. This method still
+ *    functions well as a demonstration, however it would
+ *    easily get stuck if characters repeated enough.
  */
 String.prototype.seed = function(len) {
   // Map each character to it's corresponding charcode
@@ -48,7 +53,6 @@ Image.prototype.color = function(c) {
   ctx.drawImage(this, 0, 0);
   ctx.globalCompositeOperation = "source-in";
   ctx.fillStyle = c ? c : `hsl(${Math.random() * 360}, 100%, 75%)`;
-  // '#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6);
   ctx.fillRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
   ctx.globalCompositeOperation = "source-over";
   return canvas;
@@ -58,9 +62,9 @@ HTMLCanvasElement.prototype.clear = function() {
   this.getContext("2d").clearRect(0, 0, this.width, this.height);
 };
 
-function createImage(url) {
+String.prototype.toImage = function() {
   let img = new Image();
-  img.src = url;
+  img.src = this;
   return img;
 }
 
